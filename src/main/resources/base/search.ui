@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1180</width>
-    <height>858</height>
+    <width>1049</width>
+    <height>751</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -22,16 +22,16 @@
   <property name="unifiedTitleAndToolBarOnMac">
    <bool>false</bool>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QWidget" name="root_widget">
    <property name="layoutDirection">
     <enum>Qt::LeftToRight</enum>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="root_layout">
     <item>
-     <widget class="QWidget" name="SearchWidget" native="true">
+     <widget class="QWidget" name="search_widget" native="true">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -50,7 +50,7 @@
         <height>150</height>
        </size>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QVBoxLayout" name="search_widget_layout">
        <property name="topMargin">
         <number>0</number>
        </property>
@@ -58,14 +58,14 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="QWidget" name="SearchBarWrapper" native="true">
+        <widget class="QWidget" name="searchbar_wrapper" native="true">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
            <height>64</height>
           </size>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <layout class="QHBoxLayout" name="searchbar_layout">
           <property name="spacing">
            <number>7</number>
           </property>
@@ -122,7 +122,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="pushButton_search">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
               <horstretch>0</horstretch>
@@ -152,8 +152,8 @@
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="FilterWidget" native="true">
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <widget class="QWidget" name="filter_wrapper" native="true">
+         <layout class="QHBoxLayout" name="filter_widget_layout">
           <property name="topMargin">
            <number>0</number>
           </property>
@@ -161,7 +161,7 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QGroupBox" name="groupBox">
+           <widget class="QGroupBox" name="groupBox_quality">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
               <horstretch>0</horstretch>
@@ -171,7 +171,7 @@
             <property name="title">
              <string>QUALITY</string>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <layout class="QHBoxLayout" name="quality_box_layout">
              <item>
               <widget class="QComboBox" name="qualities">
                <property name="sizePolicy">
@@ -216,11 +216,11 @@
            </widget>
           </item>
           <item>
-           <widget class="QGroupBox" name="groupBox_2">
+           <widget class="QGroupBox" name="groupBox_genre">
             <property name="title">
              <string>GENRE</string>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <layout class="QHBoxLayout" name="genre_box_layout">
              <item>
               <widget class="QComboBox" name="genres">
                <property name="sizePolicy">
@@ -350,11 +350,11 @@
            </widget>
           </item>
           <item>
-           <widget class="QGroupBox" name="groupBox_3">
+           <widget class="QGroupBox" name="groupBox_rating">
             <property name="title">
              <string>RATING</string>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <layout class="QHBoxLayout" name="rating_box_layout">
              <item>
               <widget class="QComboBox" name="ratings">
                <property name="sizePolicy">
@@ -419,11 +419,11 @@
            </widget>
           </item>
           <item>
-           <widget class="QGroupBox" name="groupBox_4">
+           <widget class="QGroupBox" name="groupBox_sort">
             <property name="title">
              <string>SORT BY</string>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <layout class="QHBoxLayout" name="sort_box_layout">
              <item>
               <widget class="QComboBox" name="sortby">
                <property name="sizePolicy">
@@ -478,11 +478,11 @@
            </widget>
           </item>
           <item>
-           <widget class="QGroupBox" name="groupBox_5">
+           <widget class="QGroupBox" name="groupBox_order">
             <property name="title">
-             <string>GroupBox</string>
+             <string>ORDER BY</string>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <layout class="QHBoxLayout" name="order_box_layout">
              <item>
               <widget class="QComboBox" name="orderby">
                <property name="sizePolicy">
@@ -513,7 +513,7 @@
      </widget>
     </item>
     <item>
-     <spacer name="verticalSpacer">
+     <spacer name="search_widget_table_vert_spacer">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
@@ -529,7 +529,7 @@
      </spacer>
     </item>
     <item>
-     <widget class="QWidget" name="widget_4" native="true">
+     <widget class="QWidget" name="table_widget" native="true">
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <property name="topMargin">
         <number>0</number>
@@ -538,13 +538,13 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="QTableWidget" name="tableWidget"/>
+        <widget class="QTableWidget" name="resultTable"/>
        </item>
       </layout>
      </widget>
     </item>
     <item>
-     <widget class="QWidget" name="widget" native="true">
+     <widget class="QWidget" name="pagenav_widget" native="true">
       <property name="maximumSize">
        <size>
         <width>16777215</width>
@@ -554,7 +554,7 @@
       <property name="layoutDirection">
        <enum>Qt::RightToLeft</enum>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
+      <layout class="QHBoxLayout" name="pagenav_layout">
        <property name="leftMargin">
         <number>11</number>
        </property>
@@ -565,11 +565,17 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="pushButton_next">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
            <width>48</width>
-           <height>36</height>
+           <height>40</height>
           </size>
          </property>
          <property name="font">
@@ -580,14 +586,23 @@
          <property name="text">
           <string>&gt;</string>
          </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="pushButton_back">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
            <width>48</width>
-           <height>36</height>
+           <height>40</height>
           </size>
          </property>
          <property name="font">
@@ -601,7 +616,17 @@
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="widget_2" native="true"/>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
@@ -610,13 +635,13 @@
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="enabled">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1180</width>
+     <width>1049</width>
      <height>26</height>
     </rect>
    </property>
@@ -624,7 +649,11 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
