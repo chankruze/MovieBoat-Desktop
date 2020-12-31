@@ -29,7 +29,7 @@ class App():
         stylesheet = app_context.get_resource('styles.qss')
         app_context.app.setStyleSheet(open(stylesheet).read())
         # main home window
-        self.home_window.resize(1500, 800)  # width, height
+        self.home_window.resize(1000, 800)  # width, height
         self.home_window.show()
 
         return app_context.app.exec_()
